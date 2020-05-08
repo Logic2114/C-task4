@@ -1,0 +1,36 @@
+@{
+   ViewData["Title"] = "Square Root Page";
+}
+@{
+    try
+    {
+        if(ViewBag.No1 != null && ViewBag.No2 != null)
+        {
+            if( ViewBag.isConverted1 && ViewBag.isConverted2 )
+            {
+                if(ViewBag.No1 <= 0 && ViewBag.No2 <= 0)
+                {
+                    <h3 class="display-7"> Error! This not a valid input. It is a negative number <br> Try Again </h3>
+                }
+                else if(ViewBag.No1 > Viewbag.No2)
+                {
+                    <h3 class="display-7"> The number @ViewBag.No1 with square root @ViewBag.SNo1 has higher <br> 
+                    square root that the number @ViewBag.No2 with square root @Viewbag.SNo2</h3>
+                }
+                else if(ViewBag.No2 > ViewBag.No1)
+                {
+                    <h3 class="display-7"> The Number @ViewBag.No2 with square root @ViewBag.SNo2 has a higher <br>
+                    square root that the number @ViewBag.No1 with square root @ViewBag.SNo1</h3>
+                }
+                else
+                {
+                    <h3 class="display-7"> These Value are Equal.Please enter another value </h3>
+                }
+            }
+        }
+    
+    }
+}
+
+    
+
